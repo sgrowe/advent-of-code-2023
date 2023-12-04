@@ -9,22 +9,24 @@
 import XCTest
 
 final class DayOneTests: XCTestCase {
-    var solver: DayOne!
-
-    override func setUpWithError() throws {
-        solver = DayOne(input: """
+    func testPartOne() throws {
+        let solver = DayOne(input: """
         1abc2
         pqr3stu8vwx
         a1b2c3d4e5f
         treb7uchet
         """)
-    }
-
-    override func tearDownWithError() throws {
-        solver = nil
-    }
-
-    func testPartOne() throws {
+        
         XCTAssertEqual(solver.part_one(), "142")
+    }
+    
+    func testPartOneSolution() throws {
+        let path = Bundle(for: DayOne.self).path(forResource: "dayOne", ofType: "txt", inDirectory: "inputs")
+        
+        let input = try String(contentsOfFile: path!)
+        
+        let solver = DayOne(input: input)
+        
+        XCTAssertEqual(solver.part_one(), "55,002")
     }
 }

@@ -7,20 +7,18 @@
 
 import Foundation
 
-class DayOne {
+public class DayOne {
     let input: String
     
-    init(input: String) {
+    public init(input: String) {
         self.input = input
     }
     
-    func part_one() -> String {
+    public func part_one() -> String {
         var total = 0
         
         input.enumerateLines { line, _ in
-            let c = self.calibrationValue(line: line)
-            print("\(c)")
-            total += c
+            total += self.calibrationValue(line: line)
         }
         
         return total.formatted()
