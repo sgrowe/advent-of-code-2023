@@ -9,6 +9,12 @@
 import XCTest
 
 final class DayOneTests: XCTestCase {
+    func input() throws -> String {
+        let path = Bundle(for: DayOne.self).path(forResource: "dayOne", ofType: "txt", inDirectory: "inputs")
+        
+        return try String(contentsOfFile: path!)
+    }
+    
     func testPartOne() throws {
         let solver = DayOne(input: """
         1abc2
@@ -21,12 +27,32 @@ final class DayOneTests: XCTestCase {
     }
     
     func testPartOneSolution() throws {
-        let path = Bundle(for: DayOne.self).path(forResource: "dayOne", ofType: "txt", inDirectory: "inputs")
-        
-        let input = try String(contentsOfFile: path!)
-        
-        let solver = DayOne(input: input)
+        let solver = try DayOne(input: input())
         
         XCTAssertEqual(solver.part_one(), "55,002")
+    }
+    
+    func testPartTwo() throws {
+        let solver = DayOne(input: """
+        two1nine
+        eightwothree
+        abcone2threexyz
+        xtwone3four
+        4nineeightseven2
+        zoneight234
+        7pqrstsixteen
+        """)
+        
+        XCTAssertEqual(solver.calibrationValue2(line: "two1nine"), 29)
+        XCTAssertEqual(solver.calibrationValue2(line: "eightwothree"), 83)
+        XCTAssertEqual(solver.calibrationValue2(line: "zoneight234"), 14)
+        
+        XCTAssertEqual(solver.part_two(), "281")
+    }
+    
+    func testPartTwoSolution() throws {
+        let solver = try DayOne(input: input())
+        
+        XCTAssertEqual(solver.part_two(), "55,093")
     }
 }

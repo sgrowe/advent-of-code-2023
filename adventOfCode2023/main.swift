@@ -15,3 +15,5 @@ let input = try String(contentsOfFile: path!)
 let dayOne = DayOne(input: input)
 
 print("Day one part one: \(dayOne.part_one())")
+
+print("Day one part two: \(dayOne.part_two())")
