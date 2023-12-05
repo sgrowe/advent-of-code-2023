@@ -8,12 +8,27 @@
 import adventOfCode2023Core
 import Foundation
 
-let path = Bundle(for: DayOne.self).path(forResource: "dayOne", ofType: "txt", inDirectory: "inputs")
+let days: [AOCDayProtocol.Type] = [
+    DayOne.self,
+    DayTwo.self,
+]
 
-let input = try String(contentsOfFile: path!)
+for day in days {
+    try solveDay(day: day)
+}
 
-let dayOne = DayOne(input: input)
+func solveDay(day: AOCDayProtocol.Type) throws {
+    let resourceName = "day\(day.name.capitalized)"
 
-print("Day one part one: \(dayOne.part_one())")
+    let path = Bundle(for: DayOne.self)
+        .path(forResource: resourceName, ofType: "txt", inDirectory: "inputs")
 
-print("Day one part two: \(dayOne.part_two())")
+    let input = try String(contentsOfFile: path!)
+
+    let solver = day.init(input: input)
+
+    print("")
+    print("Day \(day.name) part one: \(solver.part_one())")
+    print("Day \(day.name) part two: \(solver.part_two())")
+    print("------------------")
+}

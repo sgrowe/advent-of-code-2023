@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DCA2B9CB2B1DFFF6004D4BCE /* inputs in Resources */ = {isa = PBXBuildFile; fileRef = DCA2B9CA2B1DFFF5004D4BCE /* inputs */; };
+		DCC073DC2B1F5621005C43FE /* AOCDayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC073DB2B1F5621005C43FE /* AOCDayProtocol.swift */; };
+		DCC073DE2B1F56DD005C43FE /* DayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC073DD2B1F56DD005C43FE /* DayTwo.swift */; };
+		DCC073E02B1F6343005C43FE /* DayTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC073DF2B1F6343005C43FE /* DayTwoTests.swift */; };
 		DCC5EF362B1CB3E800C404E5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC5EF352B1CB3E800C404E5 /* main.swift */; };
 		DCC5EF452B1CB4BA00C404E5 /* adventOfCode2023Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = DCC5EF442B1CB4BA00C404E5 /* adventOfCode2023Core.docc */; };
 		DCC5EF4B2B1CB4BA00C404E5 /* adventOfCode2023Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC5EF412B1CB4BA00C404E5 /* adventOfCode2023Core.framework */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		DCA2B9CA2B1DFFF5004D4BCE /* inputs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = inputs; sourceTree = "<group>"; };
+		DCC073DB2B1F5621005C43FE /* AOCDayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOCDayProtocol.swift; sourceTree = "<group>"; };
+		DCC073DD2B1F56DD005C43FE /* DayTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTwo.swift; sourceTree = "<group>"; };
+		DCC073DF2B1F6343005C43FE /* DayTwoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTwoTests.swift; sourceTree = "<group>"; };
 		DCC5EF322B1CB3E800C404E5 /* adventOfCode2023 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = adventOfCode2023; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC5EF352B1CB3E800C404E5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DCC5EF412B1CB4BA00C404E5 /* adventOfCode2023Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = adventOfCode2023Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +117,8 @@
 				DCC5EF432B1CB4BA00C404E5 /* adventOfCode2023Core.h */,
 				DCC5EF442B1CB4BA00C404E5 /* adventOfCode2023Core.docc */,
 				DCC5EF5A2B1CB50F00C404E5 /* DayOne.swift */,
+				DCC073DB2B1F5621005C43FE /* AOCDayProtocol.swift */,
+				DCC073DD2B1F56DD005C43FE /* DayTwo.swift */,
 			);
 			path = adventOfCode2023Core;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				DCC5EF5C2B1CB54000C404E5 /* DayOneTests.swift */,
+				DCC073DF2B1F6343005C43FE /* DayTwoTests.swift */,
 			);
 			path = adventOfCode2023CoreTests;
 			sourceTree = "<group>";
@@ -262,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC073DC2B1F5621005C43FE /* AOCDayProtocol.swift in Sources */,
 				DCC5EF452B1CB4BA00C404E5 /* adventOfCode2023Core.docc in Sources */,
 				DCC5EF5B2B1CB50F00C404E5 /* DayOne.swift in Sources */,
+				DCC073DE2B1F56DD005C43FE /* DayTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC5EF5D2B1CB54000C404E5 /* DayOneTests.swift in Sources */,
+				DCC073E02B1F6343005C43FE /* DayTwoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

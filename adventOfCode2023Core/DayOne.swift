@@ -7,10 +7,12 @@
 
 import Foundation
 
-public class DayOne {
+public class DayOne: AOCDayProtocol {
     let input: String
     
-    public init(input: String) {
+    public static let name = "one"
+    
+    public required init(input: String) {
         self.input = input
     }
     
