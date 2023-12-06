@@ -44,4 +44,10 @@ final class DayTwoTests: XCTestCase {
         
         XCTAssertEqual(solver.part_two(), "2,286")
     }
+    
+    func testPartTwoSolution() throws {
+        let solver = DayTwo(input: try input())
+        
+        XCTAssertEqual(solver.part_two(), "66,027")
+    }
 }

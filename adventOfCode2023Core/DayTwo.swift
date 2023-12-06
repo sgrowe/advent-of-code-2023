@@ -20,7 +20,7 @@ public class DayTwo: AOCDayProtocol {
     public func part_one() -> String {
         var total = 0
 
-        self.input.enumerateLines { line, _ in
+        input.enumerateLines { line, _ in
             let match = line.firstMatch(of: /Game (\d+): (.+)/)!
 
             if self.isValidGame(game: match.2) {
@@ -33,7 +33,7 @@ public class DayTwo: AOCDayProtocol {
         return total.formatted()
     }
 
-    func isValidGame(game: String.SubSequence) -> Bool {
+    func isValidGame(game: Substring) -> Bool {
         let colours = [
             ("red", 12),
             ("green", 13),
@@ -41,17 +41,7 @@ public class DayTwo: AOCDayProtocol {
         ]
 
         for (colour, maxCount) in colours {
-            let pattern = Regex {
-                Capture {
-                    OneOrMore {
-                        .digit
-                    }
-                }
-                " "
-                colour
-            }
-
-            let anyAboveMax = game.matches(of: pattern).contains { match in
+            let anyAboveMax = game.matches(of: colourRegex(colour)).contains { match in
                 Int(match.1)! > maxCount
             }
 
@@ -61,7 +51,43 @@ public class DayTwo: AOCDayProtocol {
         return true
     }
 
+    func colourRegex(_ colour: String) -> Regex<(Substring, Substring)> {
+        Regex {
+            Capture {
+                OneOrMore {
+                    .digit
+                }
+            }
+            " "
+            colour
+        }
+    }
+
     public func part_two() -> String {
-        return ""
+        var total = 0
+
+        input.enumerateLines { line, _ in
+            let match = line.firstMatch(of: /Game (\d+): (.+)/)!
+
+            total += self.minCubes(game: match.2).values.reduce(1) { x, y in x * y }
+        }
+
+        return total.formatted()
+    }
+
+    func minCubes(game: Substring) -> [String: Int] {
+        var minCubes = [
+            "red": 0,
+            "green": 0,
+            "blue": 0,
+        ]
+
+        for colour in minCubes.keys {
+            for match in game.matches(of: colourRegex(colour)) {
+                minCubes[colour] = max(minCubes[colour]!, Int(match.1)!)
+            }
+        }
+
+        return minCubes
     }
 }
