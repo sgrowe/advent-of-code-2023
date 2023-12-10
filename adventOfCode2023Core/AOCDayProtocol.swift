@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol AOCDayProtocol {
+public protocol AOCDayProtocol: AnyObject {
     init(input: String)
 
     static var name: String { get }
@@ -15,4 +15,15 @@ public protocol AOCDayProtocol {
     func part_one() -> String
 
     func part_two() -> String
+}
+
+public extension AOCDayProtocol {
+    static func readInput() throws -> String {
+        let resourceName = "day\(Self.name.capitalized)"
+
+        let path = Bundle(for: Self.self)
+            .path(forResource: resourceName, ofType: "txt", inDirectory: "inputs")
+
+        return try String(contentsOfFile: path!)
+    }
 }

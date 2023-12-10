@@ -9,12 +9,6 @@
 import XCTest
 
 final class DayThreeTests: XCTestCase {
-    func input() throws -> String {
-        let path = Bundle(for: DayThree.self).path(forResource: "dayThree", ofType: "txt", inDirectory: "inputs")
-
-        return try String(contentsOfFile: path!)
-    }
-    
     func testIsNextToSymbol() {
         let solver = DayThree(input: """
         467..114..
@@ -54,7 +48,7 @@ final class DayThreeTests: XCTestCase {
     }
     
     func testPartOneSolution() throws {
-        let solver = try DayThree(input: input())
+        let solver = try DayThree(input: DayThree.readInput())
         
         XCTAssertEqual(solver.part_one(), "553,825")
     }
@@ -100,7 +94,7 @@ final class DayThreeTests: XCTestCase {
     }
     
     func testPartSolution() throws {
-        let solver = DayThree(input: try input())
+        let solver = try DayThree(input: DayThree.readInput())
         
         XCTAssertEqual(solver.part_two(), "93,994,191")
     }

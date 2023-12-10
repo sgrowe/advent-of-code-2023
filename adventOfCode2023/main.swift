@@ -15,18 +15,11 @@ let days: [AOCDayProtocol.Type] = [
 ]
 
 for day in days {
-    try solveDay(day: day)
+    try solveDay(day)
 }
 
-func solveDay(day: AOCDayProtocol.Type) throws {
-    let resourceName = "day\(day.name.capitalized)"
-
-    let path = Bundle(for: DayOne.self)
-        .path(forResource: resourceName, ofType: "txt", inDirectory: "inputs")
-
-    let input = try String(contentsOfFile: path!)
-
-    let solver = day.init(input: input)
+func solveDay(_ day: AOCDayProtocol.Type) throws {
+    let solver = try day.init(input: day.readInput())
 
     print("")
     print("Day \(day.name) part one: \(solver.part_one())")

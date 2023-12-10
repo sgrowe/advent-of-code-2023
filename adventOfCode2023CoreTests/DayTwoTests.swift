@@ -9,12 +9,6 @@
 import XCTest
 
 final class DayTwoTests: XCTestCase {
-    func input() throws -> String {
-        let path = Bundle(for: DayTwo.self).path(forResource: "dayTwo", ofType: "txt", inDirectory: "inputs")
-
-        return try String(contentsOfFile: path!)
-    }
-
     func testPartOne() throws {
         let solver = DayTwo(input: """
         Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
@@ -28,7 +22,7 @@ final class DayTwoTests: XCTestCase {
     }
     
     func testPartOneSolution() throws {
-        let solver = DayTwo(input: try input())
+        let solver = try DayTwo(input: DayTwo.readInput())
         
         XCTAssertEqual(solver.part_one(), "3,035")
     }
@@ -46,7 +40,7 @@ final class DayTwoTests: XCTestCase {
     }
     
     func testPartTwoSolution() throws {
-        let solver = DayTwo(input: try input())
+        let solver = try DayTwo(input: DayTwo.readInput())
         
         XCTAssertEqual(solver.part_two(), "66,027")
     }
