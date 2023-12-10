@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC2E92F52B25D5B00027E1F2 /* DayThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E92F42B25D5B00027E1F2 /* DayThree.swift */; };
+		DC2E92F72B25D6330027E1F2 /* DayThreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E92F62B25D6330027E1F2 /* DayThreeTests.swift */; };
 		DCA2B9CB2B1DFFF6004D4BCE /* inputs in Resources */ = {isa = PBXBuildFile; fileRef = DCA2B9CA2B1DFFF5004D4BCE /* inputs */; };
 		DCC073DC2B1F5621005C43FE /* AOCDayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC073DB2B1F5621005C43FE /* AOCDayProtocol.swift */; };
 		DCC073DE2B1F56DD005C43FE /* DayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC073DD2B1F56DD005C43FE /* DayTwo.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DC2E92F42B25D5B00027E1F2 /* DayThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayThree.swift; sourceTree = "<group>"; };
+		DC2E92F62B25D6330027E1F2 /* DayThreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayThreeTests.swift; sourceTree = "<group>"; };
 		DCA2B9CA2B1DFFF5004D4BCE /* inputs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = inputs; sourceTree = "<group>"; };
 		DCC073DB2B1F5621005C43FE /* AOCDayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOCDayProtocol.swift; sourceTree = "<group>"; };
 		DCC073DD2B1F56DD005C43FE /* DayTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTwo.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				DCC5EF5A2B1CB50F00C404E5 /* DayOne.swift */,
 				DCC073DB2B1F5621005C43FE /* AOCDayProtocol.swift */,
 				DCC073DD2B1F56DD005C43FE /* DayTwo.swift */,
+				DC2E92F42B25D5B00027E1F2 /* DayThree.swift */,
 			);
 			path = adventOfCode2023Core;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			children = (
 				DCC5EF5C2B1CB54000C404E5 /* DayOneTests.swift */,
 				DCC073DF2B1F6343005C43FE /* DayTwoTests.swift */,
+				DC2E92F62B25D6330027E1F2 /* DayThreeTests.swift */,
 			);
 			path = adventOfCode2023CoreTests;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				DCC5EF452B1CB4BA00C404E5 /* adventOfCode2023Core.docc in Sources */,
 				DCC5EF5B2B1CB50F00C404E5 /* DayOne.swift in Sources */,
 				DCC073DE2B1F56DD005C43FE /* DayTwo.swift in Sources */,
+				DC2E92F52B25D5B00027E1F2 /* DayThree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC5EF5D2B1CB54000C404E5 /* DayOneTests.swift in Sources */,
+				DC2E92F72B25D6330027E1F2 /* DayThreeTests.swift in Sources */,
 				DCC073E02B1F6343005C43FE /* DayTwoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

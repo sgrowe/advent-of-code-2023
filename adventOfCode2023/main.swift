@@ -11,6 +11,7 @@ import Foundation
 let days: [AOCDayProtocol.Type] = [
     DayOne.self,
     DayTwo.self,
+    DayThree.self,
 ]
 
 for day in days {
