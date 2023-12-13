@@ -11,7 +11,7 @@ import RegexBuilder
 public class DayTwo: AOCDayProtocol {
     let input: String
 
-    public static let name = "two"
+    public static let num = 2
 
     public required init(input: String) {
         self.input = input

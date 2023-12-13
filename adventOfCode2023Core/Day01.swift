@@ -10,7 +10,7 @@ import Foundation
 public class DayOne: AOCDayProtocol {
     let input: String
     
-    public static let name = "one"
+    public static let num = 1
     
     public required init(input: String) {
         self.input = input

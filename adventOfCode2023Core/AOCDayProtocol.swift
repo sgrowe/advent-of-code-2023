@@ -10,7 +10,7 @@ import Foundation
 public protocol AOCDayProtocol: AnyObject {
     init(input: String)
 
-    static var name: String { get }
+    static var num: Int { get }
 
     func part_one() -> String
 
@@ -19,7 +19,13 @@ public protocol AOCDayProtocol: AnyObject {
 
 public extension AOCDayProtocol {
     static func readInput() throws -> String {
-        let resourceName = "day\(Self.name.capitalized)"
+        var name = Self.num.formatted()
+
+        if name.count < 2 {
+            name = "0" + name
+        }
+
+        let resourceName = "day\(name)"
 
         let path = Bundle(for: Self.self)
             .path(forResource: resourceName, ofType: "txt", inDirectory: "inputs")

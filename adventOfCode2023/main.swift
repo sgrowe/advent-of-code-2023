@@ -23,7 +23,7 @@ func solveDay(_ day: AOCDayProtocol.Type) throws {
     let solver = try day.init(input: day.readInput())
 
     print("")
-    print("Day \(day.name) part one: \(solver.part_one())")
-    print("Day \(day.name) part two: \(solver.part_two())")
+    print("Day \(day.num) part one: \(solver.part_one())")
+    print("Day \(day.num) part two: \(solver.part_two())")
     print("------------------")
 }

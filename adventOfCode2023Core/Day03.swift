@@ -8,16 +8,18 @@
 import Foundation
 
 public class DayThree: AOCDayProtocol {
-    var lines: [[Character]]
+    let lines: [[Character]]
     
-    public static let name = "three"
+    public static let num = 3
     
     public required init(input: String) {
-        self.lines = []
+        var linesMut: [[Character]] = []
         
-        input.enumerateLines {
-            line, _ in self.lines.append(Array(line))
+        input.enumerateLines { line, _ in
+            linesMut.append(Array(line))
         }
+        
+        lines = linesMut
     }
     
     func isNextToSymbol(_ line: Int, _ range: ClosedRange<Int>) -> Bool {
@@ -32,9 +34,7 @@ public class DayThree: AOCDayProtocol {
             for i in symbolsRange {
                 let c = line[i]
                 
-                if c == "." || c.isNumber {
-                    continue
-                } else {
+                if c != "." && !c.isNumber {
                     return true
                 }
             }

@@ -8,16 +8,18 @@
 import Foundation
 
 public class DayFour: AOCDayProtocol {
-    public static let name = "four"
+    public static let num = 4
 
-    var cards: [Game]
+    let cards: [Game]
 
     public required init(input: String) {
-        cards = []
+        var cardsMut: [Game] = []
 
         input.enumerateLines { line, _ in
-            self.cards.append(parseGame(line))
+            cardsMut.append(parseGame(line))
         }
+
+        cards = cardsMut
     }
 
     public func part_one() -> String {
@@ -25,7 +27,7 @@ public class DayFour: AOCDayProtocol {
     }
 
     public func part_two() -> String {
-        var cardCounts: [Int] = (0 ..< cards.count).map { _ in 1 }
+        var cardCounts: [Int] = Array(repeating: 1, count: cards.count)
 
         for (i, card) in cards.enumerated() {
             let matches = card.matches()
