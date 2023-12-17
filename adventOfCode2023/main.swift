@@ -15,6 +15,7 @@ let days: [AOCDayProtocol.Type] = [
     DayFour.self,
     DayFive.self,
     Day06.self,
+    Day07.self,
 ]
 
 for day in days {

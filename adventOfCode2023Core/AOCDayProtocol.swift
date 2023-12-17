@@ -18,7 +18,7 @@ public protocol AOCDayProtocol: AnyObject {
 }
 
 public extension AOCDayProtocol {
-    static func readInput() throws -> String {
+    private static func readInput() throws -> String {
         var name = Self.num.formatted()
 
         if name.count < 2 {
@@ -31,5 +31,9 @@ public extension AOCDayProtocol {
             .path(forResource: resourceName, ofType: "txt", inDirectory: "inputs")
 
         return try String(contentsOfFile: path!)
+    }
+
+    static func initFromInput() throws -> Self {
+        try Self(input: readInput())
     }
 }
