@@ -1,5 +1,5 @@
 //
-//  DayFourTests.swift
+//  Day04Tests.swift
 //  adventOfCode2023CoreTests
 //
 //  Created by Samuel Rowe on 10/12/2023.
@@ -8,9 +8,9 @@
 @testable import adventOfCode2023Core
 import XCTest
 
-final class DayFourTests: XCTestCase {
+final class Day04Tests: XCTestCase {
     func testPartOne() throws {
-        let day = DayFour(input: """
+        let day = Day04(input: """
         Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
         Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
         Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1
@@ -21,15 +21,15 @@ final class DayFourTests: XCTestCase {
 
         XCTAssertEqual(day.part_one(), "13")
     }
-    
+
     func testPartOneSolution() throws {
-        let day = DayFour(input: try DayFour.readInput())
+        let day = try Day04.initFromInput()
 
         XCTAssertEqual(day.part_one(), "26,218")
     }
-    
+
     func testPartTwo() throws {
-        let day = DayFour(input: """
+        let day = Day04(input: """
         Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
         Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
         Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1
@@ -40,9 +40,9 @@ final class DayFourTests: XCTestCase {
 
         XCTAssertEqual(day.part_two(), "30")
     }
-    
+
     func testPartTwoSolution() throws {
-        let day = DayFour(input: try DayFour.readInput())
+        let day = try Day04.initFromInput()
 
         XCTAssertEqual(day.part_two(), "9,997,537")
     }

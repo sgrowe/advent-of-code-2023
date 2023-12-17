@@ -1,5 +1,5 @@
 //
-//  DayThreeTests.swift
+//  Day03Tests.swift
 //  adventOfCode2023CoreTests
 //
 //  Created by Samuel Rowe on 10/12/2023.
@@ -8,9 +8,9 @@
 @testable import adventOfCode2023Core
 import XCTest
 
-final class DayThreeTests: XCTestCase {
+final class Day03Tests: XCTestCase {
     func testIsNextToSymbol() {
-        let solver = DayThree(input: """
+        let solver = Day03(input: """
         467..114..
         ...*......
         ..35..633.
@@ -31,7 +31,7 @@ final class DayThreeTests: XCTestCase {
     }
     
     func testPartOne() throws {
-        let solver = DayThree(input: """
+        let solver = Day03(input: """
         467..114..
         ...*......
         ..35..633.
@@ -48,13 +48,13 @@ final class DayThreeTests: XCTestCase {
     }
     
     func testPartOneSolution() throws {
-        let solver = try DayThree(input: DayThree.readInput())
+        let solver = try Day03.initFromInput()
         
         XCTAssertEqual(solver.part_one(), "553,825")
     }
     
     func testIsGear() throws {
-        let solver = DayThree(input: """
+        let solver = Day03(input: """
         467..114..
         ...*......
         ..35..633.
@@ -77,7 +77,7 @@ final class DayThreeTests: XCTestCase {
     }
     
     func testPartTwo() throws {
-        let solver = DayThree(input: """
+        let solver = Day03(input: """
         467..114..
         ...*......
         ..35..633.
@@ -94,7 +94,7 @@ final class DayThreeTests: XCTestCase {
     }
     
     func testPartSolution() throws {
-        let solver = try DayThree(input: DayThree.readInput())
+        let solver = try Day03.initFromInput()
         
         XCTAssertEqual(solver.part_two(), "93,994,191")
     }

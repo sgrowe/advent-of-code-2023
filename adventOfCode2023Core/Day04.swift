@@ -1,5 +1,5 @@
 //
-//  DayFour.swift
+//  Day04.swift
 //  adventOfCode2023Core
 //
 //  Created by Samuel Rowe on 10/12/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class DayFour: AOCDayProtocol {
+public class Day04: AOCDayProtocol {
     public static let num = 4
 
     let cards: [Game]

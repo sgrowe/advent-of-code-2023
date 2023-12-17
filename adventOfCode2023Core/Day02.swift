@@ -8,7 +8,7 @@
 import Foundation
 import RegexBuilder
 
-public class DayTwo: AOCDayProtocol {
+public class Day02: AOCDayProtocol {
     let input: String
 
     public static let num = 2

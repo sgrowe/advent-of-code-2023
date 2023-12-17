@@ -9,11 +9,11 @@ import adventOfCode2023Core
 import Foundation
 
 let days: [AOCDayProtocol.Type] = [
-    DayOne.self,
-    DayTwo.self,
-    DayThree.self,
-    DayFour.self,
-    DayFive.self,
+    Day01.self,
+    Day02.self,
+    Day03.self,
+    Day04.self,
+    Day05.self,
     Day06.self,
     Day07.self,
 ]
@@ -23,7 +23,7 @@ for day in days {
 }
 
 func solveDay(_ day: AOCDayProtocol.Type) throws {
-    let solver = try day.init(input: day.readInput())
+    let solver = try day.initFromInput()
 
     print("")
     print("Day \(day.num) part one: \(solver.part_one())")

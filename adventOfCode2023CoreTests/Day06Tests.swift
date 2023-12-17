@@ -19,7 +19,7 @@ final class Day06Tests: XCTestCase {
     }
 
     func testPartOneSolution() throws {
-        let solver = try Day06(input: Day06.readInput())
+        let solver = try Day06.initFromInput()
 
         XCTAssertEqual(solver.part_one(), "170,000")
     }
@@ -34,7 +34,7 @@ final class Day06Tests: XCTestCase {
     }
 
     func testPartTwoSolution() throws {
-        let solver = try Day06(input: Day06.readInput())
+        let solver = try Day06.initFromInput()
 
         XCTAssertEqual(solver.part_two(), "20,537,782")
     }

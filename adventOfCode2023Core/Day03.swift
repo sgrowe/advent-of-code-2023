@@ -1,5 +1,5 @@
 //
-//  DayThree.swift
+//  Day03.swift
 //  adventOfCode2023Core
 //
 //  Created by Samuel Rowe on 10/12/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class DayThree: AOCDayProtocol {
+public class Day03: AOCDayProtocol {
     let lines: [[Character]]
     
     public static let num = 3

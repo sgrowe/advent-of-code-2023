@@ -9,8 +9,8 @@
 import XCTest
 
 final class Day05Tests: XCTestCase {
-    func withTestInput() -> DayFive {
-        DayFive(input: """
+    func withTestInput() -> Day05 {
+        Day05(input: """
         seeds: 79 14 55 13
 
         seed-to-soil map:
@@ -59,7 +59,7 @@ final class Day05Tests: XCTestCase {
     }
 
     func testPartOneSolution() throws {
-        let solver = try DayFive(input: DayFive.readInput())
+        let solver = try Day05.initFromInput()
 
         XCTAssertEqual(solver.part_one(), "379,811,651")
     }
@@ -71,7 +71,7 @@ final class Day05Tests: XCTestCase {
     }
 
     func testPartTwoSolution() throws {
-        let solver = try DayFive(input: DayFive.readInput())
+        let solver = try Day05.initFromInput()
 
         XCTAssertEqual(solver.part_two(), "27,992,443")
     }

@@ -1,5 +1,5 @@
 //
-//  DayOneTests.swift
+//  Day01Tests.swift
 //  adventOfCode2023CoreTests
 //
 //  Created by Samuel Rowe on 03/12/2023.
@@ -8,9 +8,9 @@
 @testable import adventOfCode2023Core
 import XCTest
 
-final class DayOneTests: XCTestCase {
+final class Day01Tests: XCTestCase {
     func testPartOne() throws {
-        let solver = DayOne(input: """
+        let solver = Day01(input: """
         1abc2
         pqr3stu8vwx
         a1b2c3d4e5f
@@ -21,13 +21,13 @@ final class DayOneTests: XCTestCase {
     }
     
     func testPartOneSolution() throws {
-        let solver = try DayOne(input: DayOne.readInput())
+        let solver = try Day01.initFromInput()
         
         XCTAssertEqual(solver.part_one(), "55,002")
     }
     
     func testPartTwo() throws {
-        let solver = DayOne(input: """
+        let solver = Day01(input: """
         two1nine
         eightwothree
         abcone2threexyz
@@ -45,7 +45,7 @@ final class DayOneTests: XCTestCase {
     }
     
     func testPartTwoSolution() throws {
-        let solver = try DayOne(input: DayOne.readInput())
+        let solver = try Day01.initFromInput()
         
         XCTAssertEqual(solver.part_two(), "55,093")
     }

@@ -1,5 +1,5 @@
 //
-//  DayOne.swift
+//  Day01.swift
 //  adventOfCode2023Core
 //
 //  Created by Samuel Rowe on 03/12/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class DayOne: AOCDayProtocol {
+public class Day01: AOCDayProtocol {
     let input: String
     
     public static let num = 1

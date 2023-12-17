@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class DayFive: AOCDayProtocol {
+public class Day05: AOCDayProtocol {
     var seeds: [Int] = []
     var mappings: [[Mapping]] = []
 
