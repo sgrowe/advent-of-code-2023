@@ -10,7 +10,7 @@ import Foundation
 public class Day07: AOCDayProtocol {
     public static var num = 7
 
-    let hands: [(hand: Substring, bid: Int)]
+    private let hands: [(hand: Substring, bid: Int)]
 
     public required init(input: String) {
         var data: [(hand: Substring, bid: Int)] = []

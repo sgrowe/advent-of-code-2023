@@ -10,7 +10,7 @@ import Foundation
 public class Day04: AOCDayProtocol {
     public static let num = 4
 
-    let cards: [Game]
+    private let cards: [Game]
 
     public required init(input: String) {
         var cardsMut: [Game] = []

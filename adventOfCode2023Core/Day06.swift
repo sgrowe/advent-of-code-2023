@@ -12,9 +12,9 @@ typealias Race = (duration: Int, record: Int)
 public class Day06: AOCDayProtocol {
     public static var num = 6
 
-    let races: [Race]
+    private let races: [Race]
 
-    let part_two_race: Race
+    private let part_two_race: Race
 
     public required init(input: String) {
         var times: [Int] = []

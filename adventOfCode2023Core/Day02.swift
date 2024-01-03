@@ -9,7 +9,7 @@ import Foundation
 import RegexBuilder
 
 public class Day02: AOCDayProtocol {
-    let input: String
+    private let input: String
 
     public static let num = 2
 

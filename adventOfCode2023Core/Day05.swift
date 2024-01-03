@@ -8,8 +8,8 @@
 import Foundation
 
 public class Day05: AOCDayProtocol {
-    var seeds: [Int] = []
-    var mappings: [[Mapping]] = []
+    private var seeds: [Int] = []
+    private var mappings: [[Mapping]] = []
 
     public static let num = 5
 

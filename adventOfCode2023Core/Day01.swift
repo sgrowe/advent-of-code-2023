@@ -8,7 +8,7 @@
 import Foundation
 
 public class Day01: AOCDayProtocol {
-    let input: String
+    private let input: String
     
     public static let num = 1
     

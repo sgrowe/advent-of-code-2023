@@ -8,7 +8,7 @@
 import Foundation
 
 public class Day03: AOCDayProtocol {
-    let lines: [[Character]]
+    private let lines: [[Character]]
     
     public static let num = 3
     
